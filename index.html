@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Hub - Tu Portal Deportivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Barra de navegación */
+        nav {
+            background-color: #222;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Banner de deportes */
+        .banner {
+            background: url(https://estaticos-cdn.prensaiberica.es/clip/02bb6b51-08d0-4d6f-ad61-0df7ffe7551b_source-aspect-ratio_default_0.jpg);
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .banner h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+        }
+
+        /* Secciones principales */
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        /* Últimas noticias */
+        .news-card {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .news-card img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .news-card p {
+            margin: 0;
+        }
+
+        /* Resultados en vivo */
+        .live-scores table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .live-scores th, .live-scores td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .live-scores th {
+            background-color: #222;
+            color: #fff;
+        }
+
+        /* Próximos eventos */
+        .event {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .event .details {
+            font-size: 1.2rem;
+        }
+
+        .event .date {
+            font-size: 1rem;
+            background-color: #222;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .banner h1 {
+                font-size: 2.5rem;
+            }
+
+            .news-card {
+                flex-direction: column;
+            }
+
+            .news-card img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="pelota.png" alt="Sports Hub" width="75"></a>
+        </div>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Noticias</a></li>
+            <li><a href="#">Resultados en Vivo</a></li>
+            <li><a href="#">Próximos Eventos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner principal -->
+    <div class="banner">
+        <h1>Sports Hub</h1>
+        <p>Tu fuente confiable de noticias y eventos deportivos</p>
+    </div>
+
+    <!-- Sección de noticias -->
+    <div class="container">
+        <div class="section">
+            <h2>Últimas Noticias</h2>
+            <div class="news-card">
+                <img src="https://example.com/sports-news1.jpg" alt="Noticias deportivas">
+                <div>
+                    <h3>Gran victoria en la final de la Champions League</h3>
+                    <p>El equipo se consagra como campeón tras un partido intenso que terminó 3-2 en tiempo extra.</p>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="https://example.com/sports-news2.jpg" alt="Noticias deportivas">
+                <div>
+                    <h3>Nuevo récord mundial en atletismo</h3>
+                    <p>El atleta rompe la marca en los 100 metros planos con un tiempo impresionante.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de resultados en vivo -->
+        <div class="section live-scores">
+            <h2>Resultados en Vivo</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Partido</th>
+                        <th>Equipo 1</th>
+                        <th>Equipo 2</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fútbol - Liga Española</td>
+                        <td>Real Madrid</td>
+                        <td>Barcelona</td>
+                        <td>1 - 2</td>
+                    </tr>
+                    <tr>
+                        <td>Tenis - Wimbledon</td>
+                        <td>Djokovic</td>
+                        <td>Nadal</td>
+                        <td>6 - 4, 7 - 5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Sección de próximos eventos -->
+        <div class="section">
+            <h2>Próximos Eventos</h2>
+            <div class="event">
+                <div class="details">Maratón de Nueva York</div>
+                <div class="date">12 de Noviembre, 2024</div>
+            </div>
+            <div class="event">
+                <div class="details">Final de la Copa del Mundo</div>
+                <div class="date">18 de Diciembre, 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Sports Hub. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
